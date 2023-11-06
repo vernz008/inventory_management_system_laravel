@@ -123,10 +123,13 @@ class EmployeeController extends Controller
         ]);
 
         $employeelist = Employee::all();
+
+        echo($employeelist);
         
         return response()->json(['message' => 'Employee Updated', 'data'=> $employee, 'List'=> $employeelist], 200);
     } catch (\Throwable $error) {
         throw $error;
+        
     }
     }
 
